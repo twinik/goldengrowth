@@ -66,7 +66,7 @@ export const Hero = () => {
             </div>
           </div>
         </motion.div>
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
@@ -78,8 +78,8 @@ export const Hero = () => {
               className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
-        </motion.div> */}
-        {/* <div className="relative w-screen flex justify-center ">
+        </motion.div>
+        <div className="relative w-screen flex justify-center ">
           <div className="custom-shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
             <svg
               data-name="Layer 1"
@@ -94,11 +94,11 @@ export const Hero = () => {
               ></path>
             </svg>
           </div>
-        </div> */}
+        </div>
       </div>
-      {/* {isModalOpen && (
+      {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )} */}
+      )}
     </section>
   );
 };
