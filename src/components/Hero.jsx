@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.jpg";
 
+import styles from "../styles/Diagonals.css";
+
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -18,8 +20,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
-            Discover new data flow
+          <div className="typewriter text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
+            Descubre la forma de hacer crecer tu negocio
           </div>
         </motion.div>
         <motion.div
@@ -28,11 +30,10 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.05 }}
         >
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
-            <span className="inline md:hidden">Analytics</span>
-            <span className="hidden md:inline">Analytic tools suite</span>
-          </div>
-          <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
-            for developers
+            <span>
+              No somos una agencia, somos más que lo{" "}
+              <span className="text-customPrimary">tradicional</span>.
+            </span>
           </div>
         </motion.div>
         <motion.div
@@ -40,9 +41,9 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            Experience seamless business integrations and powerful insights with
-            our cutting-edge analytic tools.
+          <div className="text-customGrayText text-base lg:text-base xl:text-3xl sm:text-base mt-10 px-12 sm:px-30 ">
+            Somos tu partner digital que impulsa{" "}
+            <span className="font-bold text-customPrimary">tu negocio</span>.
           </div>
         </motion.div>
         <motion.div
@@ -65,7 +66,7 @@ export const Hero = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
@@ -77,8 +78,8 @@ export const Hero = () => {
               className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
-        </motion.div>
-        <div className="relative w-screen flex justify-center ">
+        </motion.div> */}
+        {/* <div className="relative w-screen flex justify-center ">
           <div className="custom-shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
             <svg
               data-name="Layer 1"
@@ -93,11 +94,11 @@ export const Hero = () => {
               ></path>
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
+      )} */}
     </section>
   );
 };
