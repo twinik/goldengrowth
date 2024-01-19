@@ -1,16 +1,9 @@
 ---
-import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
-
-const featuredSites = await getCollection(
-  "showcase",
-  ({ data }) => "featured" in data,
-);
-const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!,
-);
+const { site } = Astro;
 ---
+
+<script is:inline src="/scripts/formContacto.js"></script>
 
 <ContentSection title="Contáctanos" id="contacto">
   <Fragment slot="lead">
@@ -19,57 +12,63 @@ const orderedSites = featuredSites.sort(
     >. Estamos aquí para <span class="text-primary">ayudarte</span> en todo lo que
     necesites.
   </Fragment>
-  <section class="bg-white dark:bg-gray-900">
+  <section>
     <div
-      class="md:min-w-176 mx-auto min-w-96 max-w-screen-md px-4 py-8 lg:py-6"
+      class="mx-auto min-w-96 max-w-screen-md px-4 py-8 md:min-w-176 lg:py-6"
     >
-      <form action="#" class="space-y-8">
+      <form
+        class="space-y-8"
+        accept-charset="utf-8"
+        name="form-contacto"
+        action="https://formsubmit.co/theagencytz@gmail.com"
+        method="post"
+      >
         <div>
-          <label
-            for="email"
-            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-300"
-            >Email</label
+          <label for="email" class="mb-2 block font-medium text-sm">Email</label
           >
           <input
             type="email"
             id="email"
+            name="email"
             class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
             placeholder="nombre@email.com"
             required
           />
         </div>
         <div>
-          <label
-            for="nombre"
-            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-300"
+          <label for="nombre" class="mb-2 block font-medium text-sm"
             >Nombre</label
           >
           <input
             type="text"
             id="nombre"
+            name="nombre"
             class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
             placeholder="Nombre completo"
             required
           />
         </div>
         <div class="sm:col-span-2">
-          <label
-            for="mensaje"
-            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-400"
+          <label for="mensaje" class="mb-2 block font-medium text-sm"
             >Tu mensaje</label
           >
           <textarea
             id="mensaje"
             rows="6"
             minlength="10"
+            name="mensaje"
             class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-            placeholder="Contanos en que podemos ayudarte"></textarea>
+            placeholder="Contanos en que podemos ayudarte"
+            required></textarea>
         </div>
         <button
           type="submit"
-          class="md:min-w-176 min-w-96 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 hover:bg-primary focus:outline-none focus:ring-4 dark:hover:bg-primary"
+          class="min-w-96 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 hover:bg-primary focus:outline-none focus:ring-4 md:min-w-176 dark:hover:bg-primary"
           >Enviar mensaje</button
         >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value=`${site}` />
+        <input type="hidden" name="_template" value="box" />
       </form>
     </div>
   </section>
