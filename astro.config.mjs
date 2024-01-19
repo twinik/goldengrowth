@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:4321/",
+  site: "https://theagencytzav.netlify.app/",
   integrations: [tailwind(), icon(), lottie()],
   styles: ["./src/styles/index.css"],
 });

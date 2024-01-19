@@ -30,6 +30,9 @@ module.exports = {
         192: "48rem",
         208: "52rem",
       },
+      screens: {
+        mobile: "425px",
+      },
     },
   },
   corePlugins: {
