@@ -7,4 +7,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "http://localhost:4321/",
   integrations: [tailwind(), icon(), lottie()],
+  styles: ["./src/styles/index.css"],
 });
