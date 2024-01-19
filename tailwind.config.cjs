@@ -10,7 +10,6 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
-        gradient: "var(--color-gradient)",
       },
       textColor: {
         default: "var(--color-text)",
