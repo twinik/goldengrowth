@@ -1,0 +1,109 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import type { ServiceItem } from "~/types";
+
+const services: Array<ServiceItem> = [
+  {
+    title: "Desarrollo web",
+    description:
+      "Desarrollamos sitios web a medida, con las últimas tecnologías y siguiendo las mejores prácticas de desarrollo. Estas se adaptan a cualquier dispositivo y que cumplen con los estándares de accesibilidad y usabilidad.",
+    img: "webDev",
+  },
+  {
+    title: "Edición de video",
+    description:
+      "Creamos videos cautivadores que potencian tu mensaje de manera única. La edición experta no solo te diferencia, sino que también te posiciona para el crecimiento orgánico, especialmente en plataformas como TikTok e Instagram.",
+    img: "edVideos",
+  },
+  {
+    title: "Search Engine Optimization (SEO)",
+    description:
+      "Potenciamos tu presencia online con estrategias y técnicas avanzadas para optimizar tu posicionamiento orgánico en buscadores. Aumentamos de manera constante las visitas de posibles clientes a tu sitio web, impulsando el crecimiento de tu negocio.",
+    img: "seo",
+  },
+  {
+    title: "Search Engine Marketing (SEM)",
+    description:
+      "Impulsamos tu marca con estrategias publicitarias de alto impacto en Google, Yahoo, Bing y TikTok, entre otros, atrayendo tráfico altamente cualificado a tus activos digitales. Nos centramos en generar ventas online, captar prospectos, impulsar descargas de tu app, generar llamadas y aumentar las visitas a tu negocio.",
+    img: "sem",
+  },
+  {
+    title: "Social Media",
+    description:
+      "Optimizamos tu presencia digital gestionando estratégicamente la comunicación en las redes sociales más relevantes. Potenciamos tu marca y mejoramos la visibilidad online de tu negocio.",
+    img: "socialMedia",
+  },
+  {
+    title: "Social Ads",
+    description:
+      "Diseñamos y perfeccionamos campañas impactantes en redes sociales, enfocadas en objetivos clave como ventas online, generación de prospectos, llamadas, visitas a tu local y branding. Logramos resultados tangibles a corto plazo, impulsando el éxito de tu negocio de manera efectiva.",
+    img: "socialAds",
+  },
+  {
+    title: "Growth Marketing",
+    description:
+      "Metodología centrada en el cliente que impulsa el crecimiento de tu negocio. Mediante pruebas y análisis de datos, desarrollamos las estrategias y tácticas más efectivas para mejorar y alcanzar nuevos niveles de éxito.",
+    img: "grMkt",
+  },
+  {
+    title: "Branding",
+    description:
+      "Diseñamos la esencia única de tu marca con un enfoque creativo y personalizado que se adapta a tus gustos y necesidades! Llevamos a cabo una exhaustiva revisión de tu imagen corporativa, colores, identidad y normas de estilo utilizadas en la comunicación general de tu negocio. Transformamos tus ideas en una identidad visual impactante para destacar en el mercado.",
+    img: "branding",
+  },
+];
+---
+
+<ContentSection title="Nuestros servicios" id="servicios">
+  <Fragment slot="lead">
+    Utilizamos todos los <span class="text-primary">canales digitales</span> para
+    alcanzar tu público objetivo y así maximizar tu presupuesto y <span
+      class="text-primary">retorno de la inversión</span
+    >
+  </Fragment>
+
+  {
+    services.map((service, index) => (
+      <div class="flex max-w-6xl flex-col items-center md:flex-row">
+        {index % 2 === 0 ? (
+          <>
+            <div class="md:w-1/2">
+              <div class="md:max-w-sm">
+                <LottieAnimation
+                  src={`/lotties/${service.img}.json`}
+                  loop
+                  autoplay="visible"
+                />
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2">
+              <h2 class="gradient-text mb-2 font-bold text-2xl">
+                {service.title}
+              </h2>
+              <p>{service.description}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div class="p-4 md:w-1/2">
+              <h2 class="gradient-text mb-2 font-bold text-2xl">
+                {service.title}
+              </h2>
+              <p>{service.description}</p>
+            </div>
+            <div class="md:w-1/2">
+              <div class="md:max-w-sm">
+                <LottieAnimation
+                  src={`/lotties/${service.img}.json`}
+                  loop
+                  autoplay="visible"
+                />
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    ))
+  }
+</ContentSection>

@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import ContentSection from "~/components/content-section.astro";
+import ShowcaseCard from "~/components/showcase-card.astro";
+
+const featuredSites = await getCollection(
+  "showcase",
+  ({ data }) => "featured" in data,
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!,
+);
+---
+
+<ContentSection title="Contáctanos" id="contacto">
+  <Fragment slot="lead">
+    Conéctate con nosotros y hagamos <span class="text-primary"
+      >realidad tus ideas</span
+    >. Estamos aquí para <span class="text-primary">ayudarte</span> en todo lo que
+    necesites.
+  </Fragment>
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="md:min-w-176 mx-auto min-w-96 max-w-screen-md px-4 py-8 lg:py-6"
+    >
+      <form action="#" class="space-y-8">
+        <div>
+          <label
+            for="email"
+            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-300"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+            placeholder="nombre@email.com"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="nombre"
+            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-300"
+            >Nombre</label
+          >
+          <input
+            type="text"
+            id="nombre"
+            class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+            placeholder="Nombre completo"
+            required
+          />
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="mensaje"
+            class="mb-2 block font-medium text-gray-900 text-sm dark:text-gray-400"
+            >Tu mensaje</label
+          >
+          <textarea
+            id="mensaje"
+            rows="6"
+            minlength="10"
+            class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+            placeholder="Contanos en que podemos ayudarte"></textarea>
+        </div>
+        <button
+          type="submit"
+          class="md:min-w-176 min-w-96 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 hover:bg-primary focus:outline-none focus:ring-4 dark:hover:bg-primary"
+          >Enviar mensaje</button
+        >
+      </form>
+    </div>
+  </section>
+</ContentSection>

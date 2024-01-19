@@ -1,0 +1,128 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import CompatibilityList from "~/components/compatibility-list.astro";
+import type { FeatureItem, CompatibilityItem } from "~/types";
+
+/* const features: Array<FeatureItem> = [
+  {
+    title: "React.js",
+    description:
+      "React es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario interactivas y eficientes. Utiliza un enfoque basado en componentes que permite la construcción modular de aplicaciones, facilitando el desarrollo y mantenimiento.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Tailwind CSS",
+    description:
+      "Tailwind CSS es un marco de diseño utilitario para la construcción de interfaces web. Se basa en clases predefinidas que se aplican directamente al HTML para estilizar elementos. Es altamente personalizable y favorece un enfoque de diseño más funcional.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Node.js",
+    description:
+      "Node.js es un entorno de ejecución de JavaScript del lado del servidor. Permite ejecutar código JavaScript en el servidor, lo que lo hace ideal para construir aplicaciones escalables y en tiempo real. Node.js utiliza un modelo de E/S sin bloqueo para un rendimiento eficiente.",
+    icon: "mdi:directions-fork",
+  },
+]; */
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Preact",
+    icon: "frameworks/preact",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Svelte",
+    icon: "frameworks/svelte",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "Vue",
+    icon: "frameworks/vue",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Solid",
+    icon: "frameworks/solid",
+    url: "https://www.solidjs.com/",
+  },
+  {
+    title: "Lit",
+    icon: "frameworks/lit",
+    url: "https://lit.dev/",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Cloudflare",
+    icon: "fa-brands:cloudflare",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "Render",
+    icon: "platforms/render",
+    url: "https://render.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="The Agency Tzav" id="nosotros">
+  <Fragment slot="lead">
+    Somos una agencia digital. Destacamos por mantenernos al día, con las <span
+      class="text-primary">últimas tecnologías y tendencias</span
+    >. Expertos en ofrecer la mejor <span class="text-primary"
+      >solución personalizada</span
+    >, para tu empresa, negocio o proyecto, haciéndolo crecer en el menor tiempo
+    posible.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Frameworks"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Plataformas"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+
+  <!-- <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul> -->
+</ContentSection>
