@@ -68,8 +68,8 @@ const services: Array<ServiceItem> = [
       <div class="max-w-6xl items-center md:flex md:flex-row">
         {index % 2 === 0 ? (
           <>
-            <div class="md:w-1/2">
-              <div class=" md:max-w-sm">
+            <div class="my-6 justify-center md:w-1/2">
+              <div class="m-auto max-w-60 md:max-w-sm">
                 <LottieAnimation
                   src={`/lotties/${service.img}.json`}
                   loop
@@ -92,8 +92,8 @@ const services: Array<ServiceItem> = [
               </h2>
               <p>{service.description}</p>
             </div>
-            <div class="md:w-1/2">
-              <div class="md:max-w-sm">
+            <div class="my-6 justify-center md:w-1/2">
+              <div class="m-auto max-w-60 md:max-w-sm">
                 <LottieAnimation
                   src={`/lotties/${service.img}.json`}
                   loop
