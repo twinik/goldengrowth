@@ -9,7 +9,10 @@ const { title, id } = Astro.props;
 
 <section
   id={id}
-  class="mb-48 flex scroll-mt-32 flex-col items-center justify-center gap-4 space-y-8"
+  class="mb-48 flex scroll-mt-8 flex-col items-center justify-center gap-4 space-y-8"
+  data-aos="fade-down"
+  data-aos-duration="1000"
+  data-aos-mirror="true"
 >
   <div class="flex flex-col items-center gap-4">
     <slot name="eyebrow" />
