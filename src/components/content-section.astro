@@ -10,11 +10,12 @@ const { title, id } = Astro.props;
 <section
   id={id}
   class="flex scroll-mt-32 flex-col items-center justify-center gap-4 space-y-8"
+  data-aos="fade-right"
 >
   <div class="flex flex-col items-center gap-4">
     <slot name="eyebrow" />
     <h2
-      class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+      class="gradient-text text-center font-extrabold tracking-tight text-7xl md:text-6xl"
     >
       {title}
     </h2>

@@ -6,48 +6,56 @@ import type { ServiceItem } from "~/types";
 const services: Array<ServiceItem> = [
   {
     title: "Desarrollo web",
+    subtitle: "Sitios web personalizados",
     description:
       "Desarrollamos sitios web a medida, con las últimas tecnologías y siguiendo las mejores prácticas de desarrollo. Estas se adaptan a cualquier dispositivo y que cumplen con los estándares de accesibilidad y usabilidad.",
     img: "webDev",
   },
   {
     title: "Edición de video",
+    subtitle: "Videos cautivadores",
     description:
       "Creamos videos cautivadores que potencian tu mensaje de manera única. La edición experta no solo te diferencia, sino que también te posiciona para el crecimiento orgánico, especialmente en plataformas como TikTok e Instagram.",
     img: "edVideos",
   },
   {
     title: "Search Engine Optimization (SEO)",
+    subtitle: "Optimización para buscadores",
     description:
       "Potenciamos tu presencia online con estrategias y técnicas avanzadas para optimizar tu posicionamiento orgánico en buscadores. Aumentamos de manera constante las visitas de posibles clientes a tu sitio web, impulsando el crecimiento de tu negocio.",
     img: "seo",
   },
   {
     title: "Search Engine Marketing (SEM)",
+    subtitle: "Publicidad efectiva",
     description:
       "Impulsamos tu marca con estrategias publicitarias de alto impacto en Google, Yahoo, Bing y TikTok, entre otros, atrayendo tráfico altamente cualificado a tus activos digitales. Nos centramos en generar ventas online, captar prospectos, impulsar descargas de tu app, generar llamadas y aumentar las visitas a tu negocio.",
     img: "sem",
   },
   {
     title: "Social Media",
+    subtitle: "Gestión estratégica",
     description:
       "Optimizamos tu presencia digital gestionando estratégicamente la comunicación en las redes sociales más relevantes. Potenciamos tu marca y mejoramos la visibilidad online de tu negocio.",
     img: "socialMedia",
   },
   {
     title: "Social Ads",
+    subtitle: "Campañas impactantes",
     description:
       "Diseñamos y perfeccionamos campañas impactantes en redes sociales, enfocadas en objetivos clave como ventas online, generación de prospectos, llamadas, visitas a tu local y branding. Logramos resultados tangibles a corto plazo, impulsando el éxito de tu negocio de manera efectiva.",
     img: "socialAds",
   },
   {
     title: "Growth Marketing",
+    subtitle: "Metodología de crecimiento",
     description:
       "Metodología centrada en el cliente que impulsa el crecimiento de tu negocio. Mediante pruebas y análisis de datos, desarrollamos las estrategias y tácticas más efectivas para mejorar y alcanzar nuevos niveles de éxito.",
     img: "grMkt",
   },
   {
     title: "Branding",
+    subtitle: "Diseño de identidad único",
     description:
       "Diseñamos la esencia única de tu marca con un enfoque creativo y personalizado que se adapta a tus gustos y necesidades! Llevamos a cabo una exhaustiva revisión de tu imagen corporativa, colores, identidad y normas de estilo utilizadas en la comunicación general de tu negocio. Transformamos tus ideas en una identidad visual impactante para destacar en el mercado.",
     img: "branding",
@@ -60,15 +68,15 @@ const services: Array<ServiceItem> = [
     Utilizamos todos los <span class="text-primary">canales digitales</span> para
     alcanzar tu público objetivo y así maximizar tu presupuesto y <span
       class="text-primary">retorno de la inversión</span
-    >
+    >.
   </Fragment>
 
   {
     services.map((service, index) => (
-      <div class="max-w-6xl items-center md:flex md:flex-row">
+      <div class="max-w-6xl">
         {index % 2 === 0 ? (
-          <>
-            <div class="my-6 justify-center md:w-1/2">
+          <div class="md:flex md:flex-row">
+            <div class="my-6 justify-center md:my-12 md:w-1/2">
               <div class="m-auto max-w-60 md:max-w-sm">
                 <LottieAnimation
                   src={`/lotties/${service.img}.json`}
@@ -77,22 +85,32 @@ const services: Array<ServiceItem> = [
                 />
               </div>
             </div>
-            <div class="p-4 md:w-1/2">
-              <h2 class="gradient-text mb-2 font-bold text-2xl">
+            <div class="flex flex-col justify-center p-4 text-center md:w-1/2 md:items-start md:text-start">
+              <h3 class="text-gris mb-4 font-semibold text-lg md:text-base">
+                {service.subtitle}
+              </h3>
+              <h2 class="gradient-text mb-6 font-bold text-6xl md:mb-7 md:text-4xl">
                 {service.title}
               </h2>
-              <p>{service.description}</p>
+              <p class="text-gris font-medium text-base">
+                {service.description}
+              </p>
             </div>
-          </>
+          </div>
         ) : (
-          <>
-            <div class="p-4 md:w-1/2">
-              <h2 class="gradient-text mb-2 font-bold text-2xl">
+          <div class="flex flex-col-reverse md:flex-row">
+            <div class="flex flex-col justify-center p-4 text-center md:w-1/2 md:items-end md:text-end">
+              <h3 class="text-gris mb-4 font-semibold text-lg md:text-base">
+                {service.subtitle}
+              </h3>
+              <h2 class="gradient-text mb-6 font-bold text-6xl md:mb-7 md:text-4xl">
                 {service.title}
               </h2>
-              <p>{service.description}</p>
+              <p class="text-gris font-medium text-base">
+                {service.description}
+              </p>
             </div>
-            <div class="my-6 justify-center md:w-1/2">
+            <div class="my-6 justify-center md:my-12 md:w-1/2">
               <div class="m-auto max-w-60 md:max-w-sm">
                 <LottieAnimation
                   src={`/lotties/${service.img}.json`}
@@ -101,7 +119,7 @@ const services: Array<ServiceItem> = [
                 />
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     ))

@@ -26,5 +26,6 @@ export interface NavItem {
 export interface ServiceItem {
   img: string;
   title: string;
+  subtitle: string;
   description: string;
 }
