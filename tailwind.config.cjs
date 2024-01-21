@@ -19,9 +19,14 @@ module.exports = {
       backgroundColor: {
         default: "var(--color-background)",
         offset: "var(--color-background-offset)",
+        contactInput: "var(--color-background-contact-input)",
       },
       borderColor: {
         default: "var(--color-border)",
+        input: "var(--color-border-input)",
+      },
+      placeholderColor: {
+        default: "var(--color-placeholder)",
       },
       spacing: {
         128: "32rem",
