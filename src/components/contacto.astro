@@ -5,13 +5,15 @@ const { site } = Astro;
 
 <ContentSection title="Contáctanos" id="contacto">
   <Fragment slot="lead">
-    Conéctate con nosotros y hagamos <span class="text-primary"
-      >realidad tus ideas</span
-    >. Estamos aquí para <span class="text-primary">ayudarte</span> en todo lo que
-    necesites.
+    <span class="text-lg md:text-2xl">
+      Conéctate con nosotros y hagamos <span class="text-primary"
+        >realidad tus ideas</span
+      >. Estamos aquí para <span class="text-primary">ayudarte</span> en todo lo
+      que necesites.
+    </span>
   </Fragment>
   <section>
-    <div class="mobile:min-w-96 mx-auto px-4 py-8 md:min-w-176 lg:py-6">
+    <div class="mx-auto px-4 py-8 mobile:min-w-96 md:min-w-176 lg:py-6">
       <form
         class="space-y-8"
         accept-charset="utf-8"
@@ -59,7 +61,7 @@ const { site } = Astro;
         </div>
         <button
           type="submit"
-          class="mobile:min-w-96 min-w-72 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 hover:bg-primary focus:outline-none focus:ring-4 md:min-w-176 dark:hover:bg-primary"
+          class="min-w-72 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 hover:bg-primary focus:outline-none focus:ring-4 mobile:min-w-96 md:min-w-176 dark:hover:bg-primary"
           >Enviar mensaje</button
         >
         <input type="hidden" name="_captcha" value="false" />
