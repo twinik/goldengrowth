@@ -12,6 +12,7 @@
   --color-border-input: theme("colors.gray.300");
 }
 
+
 [data-theme="dark"] {
   --color-primary: theme("colors.pink.400");
   --color-secondary: theme("colors.indigo.400");
