@@ -28,7 +28,7 @@ const { site } = Astro;
             type="email"
             id="email"
             name="email"
-            class="border-input bg-contactInput placeholder-default block w-full rounded-lg border p-2.5 text-default shadow-sm text-sm"
+            class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
             placeholder="nombre@email.com"
             required
           />
@@ -41,7 +41,7 @@ const { site } = Astro;
             type="text"
             id="nombre"
             name="nombre"
-            class="border-input bg-contactInput placeholder-default block w-full rounded-lg border p-2.5 text-default shadow-sm text-sm"
+            class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
             placeholder="Nombre completo"
             required
           />
@@ -55,13 +55,13 @@ const { site } = Astro;
             rows="6"
             minlength="10"
             name="mensaje"
-            class="border-input bg-contactInput placeholder-default block w-full rounded-lg border p-2.5 text-default shadow-sm text-sm"
+            class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
             placeholder="Contanos en que podemos ayudarte"
             required></textarea>
         </div>
         <button
           type="submit"
-          class="min-w-72 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 focus:outline-none focus:ring-4 mobile:min-w-96 md:min-w-176"
+          class="min-w-72 rounded-lg bg-gradient-to-br from-yellow-500 to-yellow-600 px-5 py-3 text-center font-medium text-white duration-300 text-sm hover:scale-105 focus:outline-none focus:ring-4 mobile:min-w-96 md:min-w-176"
           >Enviar mensaje</button
         >
         <input type="hidden" name="_captcha" value="false" />

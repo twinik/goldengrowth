@@ -1,10 +1,11 @@
 ---
-import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import CompatibilityList from "~/components/compatibility-list.astro";
+import ShowcaseCard from "~/components/showcase-card.astro";
 import type { FeatureItem, CompatibilityItem } from "~/types";
 
-/* const features: Array<FeatureItem> = [
+const features: Array<FeatureItem> = [
   {
     title: "React.js",
     description:
@@ -23,7 +24,7 @@ import type { FeatureItem, CompatibilityItem } from "~/types";
       "Node.js es un entorno de ejecución de JavaScript del lado del servidor. Permite ejecutar código JavaScript en el servidor, lo que lo hace ideal para construir aplicaciones escalables y en tiempo real. Node.js utiliza un modelo de E/S sin bloqueo para un rendimiento eficiente.",
     icon: "mdi:directions-fork",
   },
-]; */
+];
 
 const frameworks: Array<CompatibilityItem> = [
   {
@@ -90,6 +91,14 @@ const platforms: Array<CompatibilityItem> = [
     url: "https://docs.gitlab.com/ee/user/project/pages/",
   },
 ];
+
+const featuredSites = await getCollection(
+  "showcase",
+  ({ data }) => "featured" in data,
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!,
+);
 ---
 
 <ContentSection title="The Agency Digital Soft" id="nosotros">
@@ -104,6 +113,14 @@ const platforms: Array<CompatibilityItem> = [
       eficiente.
     </span>
   </Fragment>
+  <!-- Portfolio -->
+  <!-- <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {orderedSites.map((site) => <ShowcaseCard site={site} />)}
+    </div>
+  </div> -->
+
+  <!-- Platforms/frameworks -->
   <CompatibilityList
     items={frameworks}
     title="Frameworks"
@@ -115,6 +132,7 @@ const platforms: Array<CompatibilityItem> = [
     url="https://docs.astro.build/guides/deploy/"
   />
 
+  <!-- Features -->
   <!-- <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (

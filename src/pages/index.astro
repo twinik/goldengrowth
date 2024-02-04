@@ -33,7 +33,7 @@ const description = "Agency website";
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Agency Tzav" />
+    <meta property="og:title" content="Agency Name" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -43,22 +43,11 @@ const description = "Agency website";
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
-
       if (themeSaved) {
         document.documentElement.dataset.theme = themeSaved;
       } else {
         document.documentElement.dataset.theme = "dark";
       }
-
-      /* window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        }); */
     </script>
   </head>
   <body
