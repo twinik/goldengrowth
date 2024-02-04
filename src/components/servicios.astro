@@ -78,29 +78,6 @@ const services: Array<ServiceItem> = [
       <div class="max-w-6xl">
         {index % 2 === 0 ? (
           <div class="md:flex md:flex-row">
-            <div class="my-6 justify-center md:my-12 md:w-1/2">
-              <div class="m-auto max-w-60 md:max-w-sm">
-                <LottieAnimation
-                  src={`/lotties/${service.img}.json`}
-                  loop
-                  autoplay="visible"
-                />
-              </div>
-            </div>
-            <div class="flex flex-col justify-center p-4 text-center md:w-1/2 md:items-start md:text-start">
-              <h3 class="mb-2 font-semibold text-gris text-lg md:text-base">
-                {service.subtitle}
-              </h3>
-              <h2 class="gradient-text mb-6 font-extrabold text-6xl md:mb-7 md:text-4xl">
-                {service.title}
-              </h2>
-              <p class="font-normal text-gris text-base">
-                {service.description}
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div class="flex flex-col-reverse md:flex-row">
             <div class="flex flex-col justify-center p-4 text-center md:w-1/2 md:items-end md:text-end">
               <h3 class="mb-4 font-semibold text-gris text-lg md:text-base">
                 {service.subtitle}
@@ -120,6 +97,30 @@ const services: Array<ServiceItem> = [
                   autoplay="visible"
                 />
               </div>
+            </div>
+            
+          </div>
+        ) : (
+          <div class="flex flex-col-reverse md:flex-row">
+            <div class="my-6 justify-center md:my-12 md:w-1/2">
+              <div class="m-auto max-w-60 md:max-w-sm">
+                <LottieAnimation
+                  src={`/lotties/${service.img}.json`}
+                  loop
+                  autoplay="visible"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col justify-center p-4 text-center md:w-1/2 md:items-start md:text-start">
+              <h3 class="mb-2 font-semibold text-gris text-lg md:text-base">
+                {service.subtitle}
+              </h3>
+              <h2 class="gradient-text mb-6 font-extrabold text-6xl md:mb-7 md:text-4xl">
+                {service.title}
+              </h2>
+              <p class="font-normal text-gris text-base">
+                {service.description}
+              </p>
             </div>
           </div>
         )}
