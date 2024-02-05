@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import WordLogo from "../icons/wordmark.svg";
 
 const navItems: Array<NavItem> = [
   { title: "Nosotros", url: "#nosotros" },
@@ -14,10 +16,11 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <Icon name="logomark" class="size-10" />
-    <h1 class="font-bold">The Agency Digital Soft</h1>
-    <!-- <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
+  <a
+    class="flex items-center gap-3 transition duration-300 hover:translate-x-1"
+    href="#"
+  >
+    <Image src={WordLogo} alt="word logo" class="h-6 w-max md:h-10 md:p-2" />
   </a>
   <div>
     <div class="flex items-center gap-6">
