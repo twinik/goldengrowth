@@ -9,12 +9,12 @@ const { title, id } = Astro.props;
 
 <section
   id={id}
-  class="mb-48 flex scroll-mt-8 flex-col items-center justify-center gap-4 space-y-8"
+  class="mb-48 flex scroll-mt-8 flex-col items-center justify-center space-y-8"
   data-aos="fade-down"
   data-aos-duration="1000"
   data-aos-mirror="true"
 >
-  <div class="flex flex-col items-center gap-4">
+  <div class="flex flex-col items-center">
     <slot name="eyebrow" />
     <h2
       class="gradient-text min-h-14 text-center font-extrabold tracking-tight text-7xl md:text-6xl lg:h-20"
@@ -22,7 +22,9 @@ const { title, id } = Astro.props;
       {title}
     </h2>
   </div>
-  <p class="max-w-6xl text-center font-extrabold text-2xl">
+  <p
+    class="max-w-6xl text-center font-extrabold text-lg md:text-xl 2xl:text-2xl"
+  >
     <slot name="lead" />
   </p>
   <slot />
