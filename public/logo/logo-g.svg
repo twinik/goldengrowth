@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="svg267727" viewBox="0 0 200 200" height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:guide x="305.288" y="296.458" angle="90"/>
+    <linearGradient id="color-0" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <title>2</title>
+      <stop style="stop-color: rgb(202, 138, 4);"/>
+    </linearGradient>
+    <linearGradient id="color-1" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <title>1</title>
+      <stop style="stop-color: rgb(234, 179, 8);"/>
+    </linearGradient>
+    <linearGradient id="color-2" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <title>0</title>
+      <stop style="stop-color: rgb(250, 204, 21);"/>
+    </linearGradient>
+    <linearGradient id="color-3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, 1, -0.196183, -0.336159)" bx:pinned="true">
+      <title>0</title>
+      <stop style="stop-color: rgb(37, 36, 33);"/>
+    </linearGradient>
+    <linearGradient id="color-4" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <title>1</title>
+      <stop style="stop-color: rgb(24, 23, 21);"/>
+    </linearGradient>
+    <linearGradient id="gradient-2" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(230, 174, 8);"/>
+      <stop offset="1" style="stop-color: rgb(250, 204, 21);"/>
+    </linearGradient>
+  </defs>
+  <g id="logo-group" fill="#FFFFFF" transform="matrix(4.463289, 0, 0, 4.461758, -262.440369, -397.010559)" style="transform-origin: 362.421px 496.769px;">
+    <g transform="matrix(1, 0, 0, 1, -200.233704, 85.226707)" style="transform-origin: 517.939px 274.561px;">
+      <title>Growth</title>
+      <path id="path267748" style="font-style:normal;font-weight:700;font-size:72px;line-height:1;font-family:'Brandmark1 Bold';font-variant-ligatures:normal;text-align:center;text-anchor:middle" d="M 562.626 433.469 C 565.62 433.469 568.448 432.914 571.164 431.806 C 573.77 430.697 576.154 429.089 578.15 427.093 C 580.146 425.042 581.753 422.714 582.862 420.108 C 583.971 417.391 584.581 414.508 584.581 411.57 L 584.581 407.19 L 562.626 407.19 L 562.626 415.894 L 575.156 415.894 C 574.491 417.779 573.437 419.498 571.996 420.939 C 569.501 423.434 566.175 424.82 562.626 424.82 C 559.078 424.82 555.752 423.434 553.257 420.939 C 550.762 418.445 549.376 415.118 549.376 411.57 C 549.376 408.022 550.762 404.696 553.257 402.201 C 555.752 399.706 559.078 398.32 562.626 398.32 C 564.789 398.32 566.84 398.819 568.725 399.817 C 570.554 400.759 572.107 402.09 573.326 403.753 L 580.367 398.653 C 578.371 395.881 575.71 393.663 572.717 392.055 C 569.667 390.447 566.175 389.616 562.626 389.616 C 559.688 389.616 556.805 390.17 554.089 391.334 C 551.483 392.443 549.155 394.051 547.103 396.047 C 545.107 398.043 543.555 400.427 542.446 403.032 C 541.282 405.749 540.728 408.576 540.728 411.57 C 540.728 414.508 541.282 417.391 542.446 420.108 C 543.555 422.714 545.107 425.042 547.103 427.093 C 549.155 429.089 551.483 430.641 554.089 431.75 C 556.805 432.914 559.688 433.469 562.626 433.469 L 562.626 433.469 Z" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#EBB509" stroke="#EBB509"/>
+    </g>
+  </g>
+</svg>
