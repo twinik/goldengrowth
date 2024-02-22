@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import ShowcaseCard from "./showcase-card.astro";
+
+const featuredSites = await getCollection(
+  "showcase",
+  ({ data }) => "featured" in data,
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!,
+);
+---
+
+<div class="max-w-6xl space-y-2">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {orderedSites.map((site) => <ShowcaseCard site={site} />)}
+  </div>
+</div>
