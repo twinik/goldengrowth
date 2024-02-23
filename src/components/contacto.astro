@@ -22,6 +22,19 @@ const { site } = Astro;
         method="post"
       >
         <div class="flex-row lg:flex lg:gap-x-4">
+          <div class="lg: w-full">
+            <label for="nombre" class="mb-2 block font-medium text-sm"
+              >Nombre</label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
+              placeholder="Nombre completo"
+              required
+            />
+          </div>
           <div class="lg: mb-6 w-full lg:mb-0">
             <label for="email" class="mb-2 block font-medium text-sm"
               >Email</label
@@ -32,19 +45,6 @@ const { site } = Astro;
               name="email"
               class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
               placeholder="ejemplo@email.com"
-              required
-            />
-          </div>
-          <div class="lg: w-full">
-            <label for="nombre" class="mb-2 block font-medium text-sm"
-              >Nombre</label
-            >
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
-              placeholder="Tu nombre"
               required
             />
           </div>
