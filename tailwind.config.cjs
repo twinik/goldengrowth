@@ -16,6 +16,7 @@ module.exports = {
         default: "var(--color-text)",
         offset: "var(--color-text-offset)",
         gris: "var(--color-text-gris)",
+        dark: "var(--color-text-dark)",
       },
       backgroundColor: {
         default: "var(--color-background)",

@@ -4,6 +4,7 @@
   --color-text: theme("colors.gray.900");
   --color-text-offset: theme("colors.gray.600");
   --color-text-gris: #3e3f42;
+  --color-text-dark: #252421;
   --color-placeholder: theme("colors.gray.600");
   --color-background: #edede9;
   --color-background-offset: theme("colors.gray.100");
@@ -18,8 +19,8 @@
   --color-text: theme("colors.gray.50");
   --color-text-offset: theme("colors.gray.400");
   --color-text-gris: #b3b4b7;
+  --color-text-dark: #252421;
   --color-placeholder: theme("colors.gray.400");
-  /* --color-background: theme("colors.gray.900"); */
   --color-background: #020710;
   --color-background-offset: theme("colors.gray.800");
   --color-background-contact-input: theme("colors.gray.700");

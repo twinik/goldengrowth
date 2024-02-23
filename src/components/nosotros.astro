@@ -112,7 +112,7 @@ const platforms: Array<CompatibilityItem> = [
   <CompatibilityList items={platforms} title="Plataformas" /> -->
 
   <!-- Technologies -->
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <!-- <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
@@ -124,7 +124,81 @@ const platforms: Array<CompatibilityItem> = [
         </li>
       ))
     }
-  </ul>
+  </ul> -->
+
+  <section class="max-w-[88rem] py-12">
+    <div class="container mx-auto px-4">
+      <div class="-mx-4 flex flex-wrap gap-10">
+        <div
+          class="group relative overflow-hidden rounded-lg px-6 pb-8 pt-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg sm:px-10"
+        >
+          <span
+            class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[15]"
+          ></span>
+          <div class="relative z-10 mx-auto max-w-md">
+            <span
+              class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-300 group-hover:bg-primary"
+            >
+              <Icon
+                class="h-10 w-10 text-white transition-all"
+                name={"mdi:shield-account-outline"}
+              />
+            </span>
+            <h2
+              class="group-hover:text-dark mt-5 font-bold transition-all duration-300 text-2xl"
+            >
+              Nuestra Misión
+            </h2>
+            <div
+              class="group-hover:text-dark space-y-6 pt-5 leading-7 transition-all duration-300 text-base"
+            >
+              <p class="text-pretty">
+                Nuestra misión es proporcionar soluciones de marketing digital
+                innovadoras y efectivas que impulsen el éxito y el crecimiento
+                de nuestros clientes. Nos comprometemos a ofrecer estrategias
+                personalizadas, creatividad excepcional y resultados medibles
+                para satisfacer las necesidades únicas de cada cliente.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-lg px-6 pb-8 pt-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg sm:px-10"
+        >
+          <span
+            class="absolute top-10 z-0 h-20 w-20 rounded-full bg-primary transition-all duration-300 group-hover:scale-[15]"
+          ></span>
+          <div class="relative z-10 mx-auto max-w-md">
+            <span
+              class="grid h-20 w-20 place-items-center rounded-full bg-primary transition-all duration-300 group-hover:bg-primary"
+            >
+              <Icon
+                class="h-10 w-10 text-white transition-all"
+                name={"mdi:eye-outline"}
+              />
+            </span>
+            <h2
+              class="group-hover:text-dark mt-5 font-bold transition-all duration-300 text-2xl"
+            >
+              Nuestra Visión
+            </h2>
+            <div
+              class="group-hover:text-dark space-y-6 pt-5 leading-7 transition-all duration-300 text-base"
+            >
+              <p class="text-pretty">
+                Nuestra visión es ser líderes en la industria del marketing
+                digital, reconocidos por nuestra excelencia, creatividad y
+                compromiso con la innovación. Nos esforzamos por ser un socio
+                estratégico para nuestros clientes, ayudándolos a alcanzar y
+                superar sus objetivos de negocio con soluciones digitales de
+                vanguardia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PERFILES -->
   <!-- <Perfiles /> -->
