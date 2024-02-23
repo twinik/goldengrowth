@@ -1,28 +1,28 @@
 ---
-import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import CompatibilityList from "~/components/compatibility-list.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
+import { Icon } from "astro-icon/components";
+import Perfiles from "~/components/perfiles.astro";
 import type { FeatureItem, CompatibilityItem } from "~/types";
 
 const features: Array<FeatureItem> = [
   {
-    title: "React.js",
+    title: "React.Js",
     description:
       "React es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario interactivas y eficientes. Utiliza un enfoque basado en componentes que permite la construcción modular de aplicaciones, facilitando el desarrollo y mantenimiento.",
-    icon: "mdi:handshake",
+    icon: "mdi:react",
   },
   {
     title: "Tailwind CSS",
     description:
       "Tailwind CSS es un marco de diseño utilitario para la construcción de interfaces web. Se basa en clases predefinidas que se aplican directamente al HTML para estilizar elementos. Es altamente personalizable y favorece un enfoque de diseño más funcional.",
-    icon: "mdi:feather",
+    icon: "mdi:tailwind",
   },
   {
-    title: "Node.js",
+    title: "Next.Js",
     description:
-      "Node.js es un entorno de ejecución de JavaScript del lado del servidor. Permite ejecutar código JavaScript en el servidor, lo que lo hace ideal para construir aplicaciones escalables y en tiempo real. Node.js utiliza un modelo de E/S sin bloqueo para un rendimiento eficiente.",
-    icon: "mdi:directions-fork",
+      "Next.js es un framework de React que permite renderizado del lado del servidor (SSR) y generación de sitios estáticos. Ofrece una gran cantidad de herramientas y funcionalidades para el desarrollo web moderno.",
+    icon: "mdi:language-javascript",
   },
 ];
 
@@ -91,19 +91,11 @@ const platforms: Array<CompatibilityItem> = [
     url: "https://docs.gitlab.com/ee/user/project/pages/",
   },
 ];
-
-const featuredSites = await getCollection(
-  "showcase",
-  ({ data }) => "featured" in data,
-);
-const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!,
-);
 ---
 
 <ContentSection title="¿Quiénes somos?" id="nosotros">
   <Fragment slot="lead">
-    <span class="">
+    <span>
       No somos solo una agencia digital, somos <span class="text-primary"
         >Golden Growth</span
       >, tu partner digital que impulsa tu negocio. Destacamos por nuestra
@@ -114,27 +106,13 @@ const orderedSites = featuredSites.sort(
       eficiente.
     </span>
   </Fragment>
-  <!-- Portfolio -->
-  <!-- <div class="max-w-6xl space-y-2">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {orderedSites.map((site) => <ShowcaseCard site={site} />)}
-    </div>
-  </div> -->
 
   <!-- Platforms/frameworks -->
-  <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
-  />
-  <CompatibilityList
-    items={platforms}
-    title="Plataformas"
-    url="https://docs.astro.build/guides/deploy/"
-  />
+  <!-- <CompatibilityList items={frameworks} title="Frameworks" />
+  <CompatibilityList items={platforms} title="Plataformas" /> -->
 
-  <!-- Features -->
-  <!-- <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Technologies -->
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
@@ -146,5 +124,8 @@ const orderedSites = featuredSites.sort(
         </li>
       ))
     }
-  </ul> -->
+  </ul>
+
+  <!-- PERFILES -->
+  <!-- <Perfiles /> -->
 </ContentSection>

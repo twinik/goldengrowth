@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        gris: "var(--color-text-gris)",
       },
       textColor: {
         default: "var(--color-text)",
