@@ -13,7 +13,8 @@ import "~/styles/index.css";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
-const description = "Golden Growth website";
+const description =
+  "No somos solo una agencia digital, somos Golden Growth, tu partner digital que impulsa tu negocio. Conoce nuestros servicios y descubre cómo podemos ayudarte a crecer.";
 ---
 
 <!doctype html>
@@ -58,6 +59,7 @@ const description = "Golden Growth website";
     <div class="space-y-24 px-8 py-32">
       <Nosotros />
       <Servicios />
+      <Showcase />
       <Contacto />
     </div>
     <Footer />
