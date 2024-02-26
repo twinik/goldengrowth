@@ -2,6 +2,7 @@
 import ContentSection from "~/components/content-section.astro";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import type { ServiceItem } from "~/types";
+import FeaturesList from "~/components/features-list.astro";
 
 const services: Array<ServiceItem> = [
   {
@@ -10,6 +11,12 @@ const services: Array<ServiceItem> = [
     description:
       "Construimos sitios web personalizados que no solo siguen las últimas tecnologías, sino que también reflejan la esencia única de tu marca. Desde la adaptabilidad a cualquier dispositivo hasta un diseño atractivo, creamos una presencia en línea que cautiva a tu audiencia.",
     img: "webDev",
+    list1:
+      "Sitios web personalizados que reflejan la esencia única de tu marca.",
+    list2: "Adaptabilidad a cualquier dispositivo.",
+    list3: "Diseño atractivo que cautiva a tu audiencia.",
+    list4:
+      "Implementación de las últimas tecnologías para una presencia en línea óptima.",
   },
   {
     title: "Edición de video",
@@ -17,6 +24,11 @@ const services: Array<ServiceItem> = [
     description:
       "Creamos videos cautivadores que potencian tu mensaje de manera única. La edición experta no solo te diferencia, sino que también te posiciona para el crecimiento orgánico, especialmente en plataformas como TikTok e Instagram.",
     img: "edVideos",
+    list1: "Videos cautivadores que potencian tu mensaje de forma única.",
+    list2:
+      "Edición experta que te diferencia y posiciona para el crecimiento orgánico.",
+    list3: "Especialmente efectivo en plataformas como TikTok e Instagram.",
+    list4: "Maximiza el impacto de tu contenido audiovisual.",
   },
   {
     title: "Search Engine Optimization (SEO)",
@@ -24,6 +36,11 @@ const services: Array<ServiceItem> = [
     description:
       "Potenciamos tu presencia online con estrategias y técnicas avanzadas para optimizar tu posicionamiento orgánico en buscadores. Aumentamos de manera constante las visitas de posibles clientes a tu sitio web, impulsando el crecimiento de tu negocio.",
     img: "seo",
+    list1: "Estrategias avanzadas para potenciar tu presencia en línea.",
+    list2: "Optimización del posicionamiento orgánico en buscadores.",
+    list3: "Aumento constante de visitas de posibles clientes a tu sitio web.",
+    list4:
+      "Impulso del crecimiento de tu negocio mediante estrategias efectivas.",
   },
   {
     title: "Search Engine Marketing (SEM)",
@@ -31,6 +48,12 @@ const services: Array<ServiceItem> = [
     description:
       "Impulsamos tu marca con estrategias publicitarias de alto impacto en Google, Yahoo, Bing y TikTok, entre otros, atrayendo tráfico altamente cualificado a tus activos digitales. Nos centramos en generar ventas online, captar prospectos, impulsar descargas de tu app, generar llamadas y aumentar las visitas a tu negocio.",
     img: "sem",
+    list1:
+      "Estrategias publicitarias de alto impacto en múltiples plataformas.",
+    list2:
+      "Atracción de tráfico altamente cualificado a tus activos digitales.",
+    list3: "Enfoque en generación de ventas, captación de prospectos y más.",
+    list4: "Maximización del rendimiento de tu presencia en línea.",
   },
   {
     title: "Social Media",
@@ -38,6 +61,10 @@ const services: Array<ServiceItem> = [
     description:
       "Optimizamos tu presencia digital gestionando estratégicamente la comunicación en las redes sociales más relevantes. Potenciamos tu marca y mejoramos la visibilidad online de tu negocio.",
     img: "socialMedia",
+    list1: "Gestión estratégica de comunicación en redes sociales relevantes.",
+    list2: "Potenciación de tu marca en entornos digitales.",
+    list3: "Mejora de la visibilidad en línea de tu negocio.",
+    list4: "Optimización continua de tu presencia digital.",
   },
   {
     title: "Social Ads",
@@ -45,6 +72,13 @@ const services: Array<ServiceItem> = [
     description:
       "Diseñamos y perfeccionamos campañas impactantes en redes sociales, enfocadas en objetivos clave como ventas online, generación de prospectos, llamadas, visitas a tu local y branding. Logramos resultados tangibles a corto plazo, impulsando el éxito de tu negocio de manera efectiva.",
     img: "socialAds",
+    list1:
+      "Diseño y perfeccionamiento de campañas impactantes en redes sociales.",
+    list2:
+      "Enfoque en objetivos clave como ventas online, generación de prospectos y branding.",
+    list3:
+      "Resultados tangibles a corto plazo para impulsar el éxito de tu negocio.",
+    list4: "Campañas enfocadas en aumentar visitas a tu local y llamadas.",
   },
   {
     title: "Growth Marketing",
@@ -52,6 +86,12 @@ const services: Array<ServiceItem> = [
     description:
       "Metodología centrada en el cliente que impulsa el crecimiento de tu negocio. Mediante pruebas y análisis de datos, desarrollamos las estrategias y tácticas más efectivas para mejorar y alcanzar nuevos niveles de éxito.",
     img: "grMkt",
+    list1:
+      "Metodología centrada en el cliente para impulsar el crecimiento empresarial.",
+    list2:
+      "Desarrollo de estrategias efectivas a través de pruebas y análisis de datos.",
+    list3: "Mejora continua para alcanzar nuevos niveles de éxito.",
+    list4: "Enfoque en la optimización y el éxito a largo plazo.",
   },
   {
     title: "Branding",
@@ -59,6 +99,12 @@ const services: Array<ServiceItem> = [
     description:
       "Diseñamos la esencia única de tu marca con un enfoque creativo y personalizado que se adapta a tus gustos y necesidades. Llevamos a cabo una exhaustiva revisión de tu imagen corporativa, colores, identidad y normas de estilo utilizadas en la comunicación general de tu negocio. Transformamos tus ideas en una identidad visual impactante para destacar en el mercado.",
     img: "branding",
+    list1:
+      "Diseño de la esencia única de tu marca con enfoque creativo y personalizado.",
+    list2: "Revisión exhaustiva de imagen corporativa, colores e identidad.",
+    list3: "Transformación de ideas en identidad visual impactante.",
+    list4:
+      "Destacar en el mercado con una comunicación visual coherente y atractiva.",
   },
 ];
 ---
@@ -86,7 +132,7 @@ const services: Array<ServiceItem> = [
                 {service.title}
               </h2>
               <p class="text-balance font-normal text-gris text-base">
-                {service.description}
+                <FeaturesList />
               </p>
             </div>
             <div class="my-6 justify-center md:my-12 md:w-1/2">
