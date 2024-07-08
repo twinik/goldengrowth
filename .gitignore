@@ -19,3 +19,13 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# VSCode settings
+.vscode/
+
+# Configuration files
+astro.config.mjs
+prettierignore
+prettierrc.mjs
+tailwind.config.cjs
+tsconfig.json
