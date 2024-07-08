@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/inter";
+import Cursor from "~/components/cursor.astro";
 import Splash from "~/components/splash.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
@@ -54,6 +55,7 @@ const description =
   <body
     class="h-full w-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
+    <Cursor />
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
@@ -65,5 +67,6 @@ const description =
     <Footer />
 
     <script src="../js/main"></script>
+    <script src="../js/cursor"></script>
   </body>
 </html>
