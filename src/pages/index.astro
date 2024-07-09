@@ -1,5 +1,4 @@
 ---
-import "@fontsource-variable/inter";
 import Cursor from "~/components/cursor.astro";
 import Splash from "~/components/splash.astro";
 import Header from "~/components/header.astro";
@@ -10,17 +9,18 @@ import Showcase from "~/components/showcase.astro";
 import Contacto from "~/components/contacto.astro";
 import Footer from "~/components/footer.astro";
 
+import "@fontsource-variable/inter";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "No somos solo una agencia digital, somos Golden Growth, tu partner digital que impulsa tu negocio. Conoce nuestros servicios y descubre cómo podemos ayudarte a crecer.";
+  "No somos solo una agencia, somos Golden Growth, tu partner digital que impulsa tu negocio. Conoce nuestros servicios y descubre cómo podemos ayudarte a crecer.";
 ---
 
 <!doctype html>
 <html
-  lang="en"
+  lang="es"
   class="h-full min-w-full motion-safe:scroll-smooth"
   data-theme="dark"
 >
@@ -29,6 +29,7 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="canonical" href={site} />
     <meta name="generator" content={generator} />
 
     <title>Golden Growth</title>
