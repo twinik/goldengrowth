@@ -1,51 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import Luka from "~/assets/nosotros/luka.jpg";
-import Alan from "~/assets/nosotros/alan.jpg";
-import Tobi from "~/assets/nosotros/tobi.jpg";
-
-const nosotros = [
-  {
-    img: Luka,
-    name: "LUKA",
-    title: "CEO",
-    description:
-      "Egresado con honores de ORT Argentina Yatay. Estudiante en la UTN en tercer año de Ingeniería en Sistemas. Actualmente trabajo como scripter junior con más de 1.5 años de experiencia en Opinaia",
-    social: {
-      linkedin: "https://www.linkedin.com/in/luka-levy-3b3b3b1b7/",
-      instagram: "https://www.instagram.com/luka_portnoi/",
-    },
-  },
-  {
-    img: Alan,
-    name: "ALAN",
-    title: "CTO",
-    description:
-      "Egresado del área de informática en la Escuela Técnica Ort. Actualmente, cursando la Licenciatura en Comunicación Digital en la UP, donde me especializo en estrategias digitales y medios de comunicación online.",
-    social: {
-      linkedin: "https://www.linkedin.com/in/alan-fleischer-48b2a1197/",
-      instagram: "https://www.instagram.com/alanflei14/",
-    },
-  },
-  {
-    img: Tobi,
-    name: "TOBIAS",
-    title: "CFO",
-    description:
-      "Estudiante de Ingeniería en Sistemas en UTN y desarrollador Freelance con mas de 2 años de experiencia en el rubro. Egresado con honores de la Escuela Técnica ORT en la especialidad de informática.",
-    social: {
-      linkedin: "https://www.linkedin.com/in/tobias-winik/",
-      instagram: "https://www.instagram.com/tobiwinik_/",
-    },
-  },
-];
 ---
 
 <section
   class="flex max-w-7xl flex-col items-end justify-center gap-16 md:flex-row"
 >
-  {
+  <!-- {
     nosotros.map(({ img, name, title, description, social }) => (
       <article class=" flex flex-1 flex-col items-center justify-center gap-3 rounded-lg">
         <Image class="mb-5 h-48 w-48 rounded-lg" src={img} alt={name} />
@@ -66,5 +27,5 @@ const nosotros = [
         </div>
       </article>
     ))
-  }
+  } -->
 </section>
