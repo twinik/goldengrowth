@@ -32,6 +32,7 @@ const { site } = Astro;
               name="nombre"
               class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
               placeholder="Nombre completo"
+              autocomplete="name"
               required
             />
           </div>
@@ -45,6 +46,7 @@ const { site } = Astro;
               name="email"
               class="block w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
               placeholder="ejemplo@email.com"
+              autocomplete="email"
               required
             />
           </div>
@@ -60,7 +62,8 @@ const { site } = Astro;
             name="mensaje"
             class="block max-h-60 min-h-24 w-full rounded-lg border border-input bg-contactInput p-2.5 text-default placeholder-default shadow-sm text-sm"
             placeholder="Contanos en que podemos ayudarte"
-            required></textarea>
+            required
+          />
         </div>
         <button
           type="submit"
